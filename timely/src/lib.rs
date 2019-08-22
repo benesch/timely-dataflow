@@ -111,3 +111,6 @@ impl<T: Clone+'static> Data for T { }
 /// `Data` trait, which describes requirements for communication along channels.
 pub trait ExchangeData: Data + communication::Data { }
 impl<T: Data + communication::Data> ExchangeData for T { }
+
+/// A struct to test Cargo's [patch] implementation.
+pub struct TestPatch;
